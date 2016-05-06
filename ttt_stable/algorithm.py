@@ -2,7 +2,7 @@ import sys
 import operator
 import copy
 
-class Minimax:
+class Heuristics:
 
 
 
@@ -89,9 +89,8 @@ class Minimax:
         '''look at a subset of state space,
            for each observed position, if there exists
            a position within the subset that is currently near the "move"  being
-           explored from the legal_moves list
-           increase the score of that "move by" X amount
-           of points.
+           explored from the legal_moves list AND that position is also our previously played move  --
+           increase the weight of the current "move" by X
 
         '''
         opts_new = []
